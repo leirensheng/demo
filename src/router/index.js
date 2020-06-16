@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Org from '../views/Home.vue'
+import User from '../views/User.vue'
+import ThreeeD from '../views/threeD.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +10,17 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Org
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
+  },
+  {
+    path: '/3d',
+    name: 'threeD',
+    component: ThreeeD
   },
   {
     path: '/about',

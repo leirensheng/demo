@@ -1,16 +1,15 @@
 <template>
    <div class="home">
-      <Select-tag :tree-options="options" tree-title="部门" tag-title="已选部门"></Select-tag>
+      <Select-tag2  ></Select-tag2>
    </div>
 </template>
 
 <script>
-import SelectTag from '@/components/selectTag'
-import options from './components/options'
+import SelectTag2 from '@/components/selectTag2'
 export default {
   name: 'Home',
   components: {
-    SelectTag
+    SelectTag2
   },
   data () {
     return {
@@ -18,9 +17,7 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
-      this.options = options
-    }, 200)
+
   }
 }
 </script>
