@@ -1,21 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <el-tabs
-        v-model="activeName"
-        @tab-click="handleClick"
-      >
-        <el-tab-pane
-          :key="one.name"
-          v-for="one in tabs"
-          :label="one.name"
-          :name="one.route"
-        >
-
-        </el-tab-pane>
-      </el-tabs>
-      <router-view />
+       <router-link class="link" v-for="one in tabs" :key="one.name" :to="one.route">{{one.name}}</router-link>
     </div>
+      <router-view />
   </div>
 </template>
 <script>
@@ -51,7 +39,9 @@ export default {
 
 #nav {
   padding: 30px;
-
+  .link{
+    margin-right: 12px;
+  }
   a {
     font-weight: bold;
     color: #2c3e50;
