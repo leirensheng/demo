@@ -754,6 +754,7 @@ export default {
   display: flex;
   .left {
     flex: 1;
+    min-height: 90vh;
   }
   .right {
     overflow: scroll;
