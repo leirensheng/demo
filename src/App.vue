@@ -16,6 +16,8 @@ export default {
         { route: '/3d', name: '3D页面' },
         { route: '/org', name: '部门选择组件' },
         { route: '/user', name: '部门用户选择组件' }
+        // { route: '/org-man', name: '部门管理组件' }
+
       ]
     }
   },
