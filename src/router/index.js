@@ -3,12 +3,13 @@ import VueRouter from 'vue-router'
 import Org from '../views/Home.vue'
 import User from '../views/User.vue'
 import ThreeeD from '../views/threeD.vue'
+import jsonEditor from '../views/jsonEditor.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/org',
     name: 'Home',
     component: Org
   },
@@ -21,6 +22,11 @@ const routes = [
     path: '/3d',
     name: 'threeD',
     component: ThreeeD
+  },
+  {
+    path: '/',
+    name: 'jsonEditor',
+    component: jsonEditor
   },
   {
     path: '/about',

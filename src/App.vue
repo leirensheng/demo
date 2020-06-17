@@ -1,16 +1,45 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">选择部门</router-link> |
-      <router-link to="/user">选择用户</router-link> |
-      <router-link to="/about">部门管理</router-link> |
-      <router-link to="/3d">3D</router-link>
+      <el-tabs
+        v-model="activeName"
+        @tab-click="handleClick"
+      >
+        <el-tab-pane
+          :key="one.name"
+          v-for="one in tabs"
+          :label="one.name"
+          :name="one.route"
+        >
 
+        </el-tab-pane>
+      </el-tabs>
+      <router-view />
     </div>
-    <router-view/>
   </div>
 </template>
-
+<script>
+export default {
+  data () {
+    return {
+      activeName: '/',
+      tabs: [
+        { route: '/', name: 'json编辑器' },
+        { route: '/3d', name: '3D页面' },
+        { route: '/org', name: '部门选择组件' },
+        { route: '/user', name: '部门用户选择组件' }
+      ]
+    }
+  },
+  methods: {
+    handleClick (tab) {
+      if (tab.name) {
+        this.$router.push(tab.name)
+      }
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
